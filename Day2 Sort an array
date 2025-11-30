@@ -1,0 +1,22 @@
+
+import java.util.Arrays;
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+        int[] arr = {5,3,8,1,2};
+        Arrays.sort(arr);
+
+     for(int num : arr)
+     {
+    System.out.print(num + " ");
+   }
+
+}
+}
+
+output:-   1,2,3,4,5
+
+
+
