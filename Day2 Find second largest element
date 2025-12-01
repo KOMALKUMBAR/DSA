@@ -1,0 +1,25 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int[]  arr ={10,20,30,40,50,5};
+        int max=Integer.MIN_VALUE;
+        int second =Integer.MIN_VALUE;
+        for (int num:arr)
+        {   
+            if(num>max)
+           //  10 > max ✔
+          //   25 > max ✔
+            {
+                second=max;
+                max=num;
+            }else if(num>second && num!=max){
+                second=num;
+            }
+        }
+        System.out.println(second);
+    }
+}
+
+output:-40
