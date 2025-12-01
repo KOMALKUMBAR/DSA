@@ -1,0 +1,36 @@
+import java.util.*;
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        if (x < 0) return false;
+
+        int origin = x;
+        int rev = 0;
+
+        while (x != 0) {                   // use while, not if
+            int digit = x % 10;
+
+            // Check for overflow
+            if (rev > (Integer.MAX_VALUE - digit) / 10) return false;
+
+            rev = rev * 10 + digit;
+            x = x / 10;
+        }
+
+        return origin == rev;
+    }
+}
+
+// Main class to run the program
+class Main {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int num = 121;
+        if (sol.isPalindrome(num)) {
+            System.out.println(num + " is a Palindrome");
+        } else {
+            System.out.println(num + " is NOT a Palindrome");
+        }
+    }
+}
+output :-121  is a Palindrome 
