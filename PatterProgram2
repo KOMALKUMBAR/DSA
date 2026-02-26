@@ -1,0 +1,26 @@
+output
+* * * *
+* * * *
+* * * *
+* * * *
+//row and coloum 4
+int n= 4
+public class main(){
+   public static void main (String[] arg())
+//create the obje 
+   Solucation s= new Solucation()
+  int n=4;
+ s.patter(n):
+}
+Class  Solucation(){
+public void patter(int n){
+//logic
+for(int i=0;i<n;i++)
+{
+for(int j=0;j<n;j++)
+{
+System.out.print("*")
+  }
+System.out.println()
+}
+}
