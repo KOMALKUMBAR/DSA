@@ -1,0 +1,20 @@
+fun main() {
+    val obj = Solucation()
+    val num = 12345
+    println(obj.reverseNumber(num))
+}
+
+class Solucation {
+    fun reverseNumber(n: Int): Int {
+        var num = n
+        var reverseNum = 0
+
+        while (num > 0) {
+            val lastDigit = num % 10       // get last digit
+            reverseNum = reverseNum * 10 + lastDigit  // build reversed number
+            num /= 10                     // remove last digit
+        }
+
+        return reverseNum
+    }
+}
