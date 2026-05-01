@@ -1,0 +1,20 @@
+fun main() {
+    var obj =solucation()
+    val num =12
+    println(obj.isPalindrom(num))
+}
+class solucation(){
+    fun isPalindrom(n:Int):Boolean{
+        
+        if(n<0)return false
+        var num =n
+        var reverse = 0
+        while(num>0){
+            var lastdigit = num%10
+            reverse =reverse *10 + lastdigit
+            num /=10
+        }
+        return n ==reverse
+        
+    }
+}
