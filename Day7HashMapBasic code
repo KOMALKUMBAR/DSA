@@ -1,0 +1,80 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.HashMap;
+
+class Main {
+    public static void main(String[] args) {
+        HashMap<Integer, String>map=new HashMap<>();
+        map.put(1,"App");
+        map.put(2,"New");
+        
+        System.out.println(map.containsKey(1));//check the key  chaeck
+                System.out.println(map.get(1));
+        System.out.println(map.get(2))
+    }
+}
+output   true, App, New
+
+
+🧠 What is a HashMap?
+
+A HashMap in Java is a data structure that stores data in key → value pairs.
+
+👉 Think like this:
+
+Key  → Value
+2    → 0
+7    → 1
+Key = the number (from array)
+Value = its index
+⚡ Why use HashMap?
+
+Because it is very fast:
+
+Insert → O(1)
+Search → O(1)
+
+That’s why Two Sum becomes O(n) instead of O(n²).
+
+🔧 Basic Syntax:
+HashMap<Integer, Integer> map = new HashMap<>();
+Important methods:
+1. Put (store value)
+map.put(2, 0);   // key=2, value=index 0
+2. Get (retrieve value)
+map.get(2);  // returns 0
+3. Check if key exists
+map.containsKey(2);  // true or false
+📦 Example:
+HashMap<Integer, String> map = new HashMap<>();
+
+map.put(1, "Apple");
+map.put(2, "Banana");
+
+System.out.println(map.get(1)); // Apple
+System.out.println(map.containsKey(2)); // true
+🔁 How HashMap is used in Two Sum:
+HashMap<Integer, Integer> map = new HashMap<>();
+Step-by-step idea:
+Step	Current Number	Complement	Map	Action
+1	2	7	{}	Store (2 → 0)
+2	7	2	{2→0}	Found → Answer
+🎯 Key Concept:
+
+Instead of searching the whole array again:
+
+We store previous numbers
+
+Then quickly check:
+
+target - current number
+🔥 Simple Analogy:
+
+Imagine:
+
+You have a list of numbers
+You keep a “memory notebook” (HashMap)
+Every time you see a number, you:
+Ask: “Do I already have the pair I need?”
+If yes → done
+If no → write it down
