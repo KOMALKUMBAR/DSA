@@ -1,0 +1,147 @@
+Iterable
+
+primitiveData-
+   │---int 
+   | --chat
+Non -primitive
+ | -Array
+ |- List
+ | stack
+ | quea
+ | tree
+ | grap
+Collection
+   ├── List
+   │     ├── ArrayList
+   │     ├── LinkedList
+   │     └── Vector
+   │
+   ├── Set
+   │     ├── HashSet
+   │     ├── LinkedHashSet
+   │     └── TreeSet
+   │
+   └── Queue
+         ├── PriorityQueue
+         └── LinkedList
+         
+Map (separate, not part of Collection)
+   ├── HashMap
+   ├── LinkedHashMap
+   ├── TreeMap
+   └── Hashtable
+
+1. Primitive Data Types (Basic values)
+
+These store single simple values.
+
+✅ Example:
+int a = 10;          // whole number
+char ch = 'A';       // single character
+boolean isTrue = true; // true/false
+
+👉 These are not objects, just direct values.
+
+🔹 2. Non-Primitive Data Structures (Complex / Collection of data)
+
+These store multiple values or relationships.
+
+📦 1. Array (Fixed size)
+int[] arr = {10, 20, 30, 40};
+
+System.out.println(arr[0]); // 10
+
+👉 Stores multiple values of same type
+
+📋 2. List (Dynamic size)
+import java.util.ArrayList;
+
+ArrayList<Integer> list = new ArrayList<>();
+list.add(10);
+list.add(20);
+list.add(20); // duplicates allowed
+
+System.out.println(list); // [10, 20, 20]
+
+👉 Ordered + duplicates allowed
+
+📚 3. Stack (LIFO – Last In First Out)
+import java.util.Stack;
+
+Stack<Integer> stack = new Stack<>();
+stack.push(10);
+stack.push(20);
+
+System.out.println(stack.pop()); // 20
+
+👉 Like plate stack
+
+🚶 4. Queue (FIFO – First In First Out)
+import java.util.LinkedList;
+import java.util.Queue;
+
+Queue<Integer> queue = new LinkedList<>();
+queue.add(10);
+queue.add(20);
+
+System.out.println(queue.poll()); // 10
+
+👉 Like line in ticket counter
+
+🔑 5. Map (Key → Value pair)
+import java.util.HashMap;
+
+HashMap<Integer, String> map = new HashMap<>();
+map.put(1, "Apple");
+map.put(2, "Banana");
+
+System.out.println(map.get(1)); // Apple
+
+👉 Like dictionary / phonebook
+
+🌳 6. Tree (Hierarchical structure)
+class Node {
+    int data;
+    Node left, right;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+👉 Example structure:
+
+      10
+     /  \
+    5    15
+
+👉 Used in:
+
+File system
+Hierarchy data
+🌐 7. Graph (Network structure)
+import java.util.*;
+
+class GraphExample {
+    public static void main(String[] args) {
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+
+        graph.put(1, Arrays.asList(2, 3));
+        graph.put(2, Arrays.asList(1, 4));
+        graph.put(3, Arrays.asList(1));
+        graph.put(4, Arrays.asList(2));
+
+        System.out.println(graph);
+    }
+}
+
+👉 Example:
+
+1 ---- 2
+|      |
+3      4
+
+👉 Used in:
+
+Google Maps
+Social networks
